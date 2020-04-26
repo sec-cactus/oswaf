@@ -20,3 +20,14 @@ cd oswaf
 # 运行
 默认启用了ModSecurity和ngx_lua_waf，且优先匹配ModSecurity。<br/>
 通过调整/usr/local/openresty/nginx/conf/nginx/conf中对各waf的启用情况，调整具体的waf部署。
+```
+    # modsecurity config
+    modsecurity on;
+    modsecurity_rules_file /usr/local/openresty/nginx/conf/modsecurity/modsecurity.conf;
+
+    # ngx_lua_config
+    lua_package_path "/usr/local/openresty/nginx/conf/ngx_lua_waf/?.lua";
+    lua_shared_dict limit 50m;
+    init_by_lua_file  /usr/local/openresty/nginx/conf/ngx_lua_waf/init.lua; 
+    access_by_lua_file /usr/local/openresty/nginx/conf/ngx_lua_waf/access.lua;
+```
