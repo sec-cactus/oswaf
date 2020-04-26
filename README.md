@@ -12,6 +12,7 @@ https://github.com/unixhot/waf<br/>
 # 安装
 运行环境：CentOS 7.6
 ```
+cd /usr/local
 git clone https://github.com/sec-cactus/oswaf
 cd oswaf
 ./install.sh
