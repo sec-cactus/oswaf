@@ -78,8 +78,8 @@ echo '---End install ngx_lua_waf---'
 # 5. Config
 echo '---Start config---'
 
-cd /usr/local
-git clone https://github.com/sec-cactus/oswaf
+#cd /usr/local
+#git clone https://github.com/sec-cactus/oswaf
 cp /usr/local/oswaf/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 cp /usr/local/oswaf/config.lua /usr/local/openresty/nginx/conf/ngx_lua_waf
 cp /usr/local/oswaf/modsecurity.conf /usr/local/openresty/nginx/conf/modsecurity/modsecurity.conf
