@@ -5,7 +5,7 @@ config_waf_enable = "on"
 --log dir
 config_log_dir = "/var/log/ngx_lua_waf"
 --rule setting
-config_rule_dir = "/usr/local/openresty/nginx/conf/waf/lua/rule-config"
+config_rule_dir = "/usr/local/openresty/nginx/conf/ngx_lua_waf/rule-config"
 --enable/disable white url
 config_white_url_check = "on"
 --enable/disable white ip
