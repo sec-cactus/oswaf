@@ -1,0 +1,16 @@
+[Unit]
+Description=OpenResty
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/openresty/nginx/logs/nginx.pid
+ExecStartPre=/usr/local/openresty/nginx/sbin/nginx -t -c /usr/local/openresty/nginx/conf/nginx.conf
+ExecStart=/usr/local/openresty/nginx/sbin/nginx -c /usr/local/openresty/nginx/conf/nginx.conf
+ExecReload=/usr/local/openresty/nginx/sbin/nginx -s reload
+ExecStop=/usr/local/openresty/nginx/sbin/nginx -s stop
+ExecQuit=/usr/local/openresty/nginx/sbin/nginx -s quit
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
