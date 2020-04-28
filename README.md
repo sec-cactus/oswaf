@@ -15,6 +15,7 @@ https://github.com/unixhot/waf<br/>
 cd /usr/local
 git clone https://github.com/sec-cactus/oswaf
 cd oswaf
+chmod +x ./install.sh
 ./install.sh
 ```
 # 运行
